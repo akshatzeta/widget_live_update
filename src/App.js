@@ -11,14 +11,14 @@ const App = () => {
     headerFontColor: "#FFFFFF",
     backgroundColor: "#E8E1DB",
     chatFontColor: "#323130",
-    avatarImage: "", // Placeholder for uploaded file
-    launcherImage: "", // Placeholder for uploaded file
+    avatarImage: "", 
+    launcherImage: "", 
   });
 
   const handleInputChange = (e) => {
     const { name, value, files } = e.target;
     if (files && files[0]) {
-      // Handle file input
+      
       const reader = new FileReader();
       reader.onload = (event) => {
         setConfig((prev) => ({
