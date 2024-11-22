@@ -11,9 +11,9 @@ const Left = ({ config, handleInputChange, handleLoadConfig }) => {
       fileReader.onload = (event) => {
         try {
           const loadedConfig = JSON.parse(event.target.result);
-          console.log("Parsed Config:", loadedConfig); // Debugging log
+          console.log("Parsed Config:", loadedConfig); 
           if (isValidConfig(loadedConfig)) {
-            handleLoadConfig(loadedConfig); // Ensure this function is correctly passed
+            handleLoadConfig(loadedConfig); 
             setError(null);
           } else {
             setError("Invalid configuration format.");
@@ -29,7 +29,7 @@ const Left = ({ config, handleInputChange, handleLoadConfig }) => {
     }
   };
   
-  // Validate the structure of the configuration
+  
   const isValidConfig = (config) => {
     const requiredFields = [
       "configName",
@@ -50,7 +50,7 @@ const Left = ({ config, handleInputChange, handleLoadConfig }) => {
   return (
     <div className="w-1/2 p-6 bg-white shadow-md">
 
-      {/* Load File Button */}
+    
       <div className="mb-6">
         <button
           type="button"
@@ -72,7 +72,7 @@ const Left = ({ config, handleInputChange, handleLoadConfig }) => {
       </div>
 
       <form className="flex-row px-5 space-y-3">
-        {/* Config Name */}
+        
         <div>
           <label className="block font-medium mb-2">Config Name</label>
           <input
@@ -84,7 +84,7 @@ const Left = ({ config, handleInputChange, handleLoadConfig }) => {
           />
         </div>
 
-        {/* Bot Name */}
+        
         <div>
           <label className="block font-medium mb-2">Bot Name</label>
           <input
@@ -96,7 +96,7 @@ const Left = ({ config, handleInputChange, handleLoadConfig }) => {
           />
         </div>
 
-        {/* Font Family */}
+        
         <div>
           <label className="block font-medium mb-2">Font Family</label>
           <select
@@ -111,7 +111,7 @@ const Left = ({ config, handleInputChange, handleLoadConfig }) => {
           </select>
         </div>
 
-        {/* Colors with Text Input and Color Picker */}
+        
         {[
           { label: "Header Color", name: "headerColor" },
           { label: "Header Font Color", name: "headerFontColor" },
@@ -154,7 +154,7 @@ const Left = ({ config, handleInputChange, handleLoadConfig }) => {
           </div>
         ))}
 
-        {/* Avatar Image */}
+        
         <div>
           <label className="block font-medium mb-2">Avatar Image</label>
           <input
@@ -166,7 +166,7 @@ const Left = ({ config, handleInputChange, handleLoadConfig }) => {
           />
         </div>
 
-        {/* Launcher Image */}
+        
         <div>
           <label className="block font-medium mb-2">Launcher Image</label>
           <input
