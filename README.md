@@ -24,7 +24,7 @@ Ensure you have the following installed on your machine:
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/chatbot-customizer.git 
+   git clone https://github.com/akshatzeta/widget_live_update.git 
 
 2. Navigate to the project directory:
 
